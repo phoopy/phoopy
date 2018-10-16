@@ -36,32 +36,12 @@ class Application(BaseApplication):
     def get_default_input_definition(self):
         definition = super(Application, self).get_default_input_definition()
         definition.add_option(InputOption('--env', None, InputOption.VALUE_OPTIONAL, 'Application environment'))
+        definition.add_option(InputOption('--no-debug', None, InputOption.VALUE_IS_FLAG, 'Disable debugging'))
         return definition
 
     def setup_application(self, input_):
         # self.setup_environment(input_)
         self.setup_logging()
-
-    # def setup_environment(self, input_):
-    #     env = input_.get_parameter_option('--env', None)
-    #     if not env:
-    #         return
-    #     service_path = path.join(s, env, 'services.py')
-    #     if not path.exists(service_path):
-    #         raise UsageException('Environment services.py not found at: {}'.format(service_path))
-    #     module = self.import_module_by_path(service_path)
-    #     if not hasattr(module, 'dependencies'):
-    #         raise UsageException('Environment services.py does not contains dependencies')
-    #     for key in module.dependencies:
-    #         self.__container[key] = module.dependencies[key]
-
-    # def import_module_by_path(self, path):
-    #     path_backup = sys.path[:]
-    #     sys.path = [os.path.dirname(path)] + sys.path
-    #     module_name = os.path.basename(path).split('.py')[0]
-    #     module = __import__(module_name, globals(), locals(), [], 0)
-    #     sys.path = path_backup
-    #     return module
 
     def setup_logging(self):
         self.logger = self.__container['logger']

@@ -15,14 +15,13 @@ class Kernel(object):
         self.__config = {}
         self.__parameters = {}
         self.__container = None
-        pass
 
     def get_environment(self):
         return self.__environment
 
     def boot(self):
-        if True is self.__booted:
-            pass
+        if self.__booted:
+            return
 
         self.__initialize_configuration()
 
@@ -109,7 +108,7 @@ class Kernel(object):
         if '@' == value[0]:
             return c[value[1:]]
         elif const_matches:
-            return self.__import_module_variable(const_matches[1])
+            return self.__import_module_variable(const_matches.groups(0)[0])
         elif parameters_matches:
             return self.__interpolate_parameter(value, parameters_matches)
         else:
@@ -133,9 +132,13 @@ class Kernel(object):
             match = match[1:-1]
             keys = match.split('.')
             parameter_value = self.__get_from_dict(keys, self.__parameters)
-            if not parameter_value:
+            if None is not parameter_value and not parameter_value:
                 continue
-            return_value = return_value.replace('%{}%'.format(match), parameter_value)
+
+            if isinstance(parameter_value, str):
+                return_value = return_value.replace('%{}%'.format(match), parameter_value)
+            else:
+                return_value = parameter_value
 
         return return_value
 
