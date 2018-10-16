@@ -22,3 +22,8 @@ coverage.xml
 *.cover
 .hypothesis/
 .pytest_cache/
+
+build
+.eggs/
+dist
+phoopy.egg-info/
