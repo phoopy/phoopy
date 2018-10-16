@@ -6,7 +6,7 @@ long_description = open('README.rst', 'r').read()
 setup(
     name='phoopy',
     version=phoopy.__version__,
-    packages=['phoopy'],
+    packages=['phoopy', 'phoopy.helper'],
     setup_requires=['wheel'],
     install_requires=[],
     description="Full stack framework for python based on bundles",
