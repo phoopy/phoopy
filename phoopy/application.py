@@ -4,7 +4,7 @@ from cleo import Application as BaseApplication
 from cleo.inputs.input import Input
 from cleo.exceptions import MissingArguments
 from cleo.inputs.input_option import InputOption
-from . import ProxyCommand
+from .proxy_command import ProxyCommand
 
 
 class ApplicationException(Exception):
