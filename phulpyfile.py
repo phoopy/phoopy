@@ -34,3 +34,8 @@ def unit_test(phulpy):
 @task
 def clean(phulpy):
     system('find . -name \'*.pyc\' -delete')
+
+
+@task
+def release(phulpy):
+    system('rm -Rf dist && rm -Rf build && python setup.py sdist upload && python setup.py bdist_wheel upload')
