@@ -6,4 +6,4 @@ from .kernel import Kernel  # noqa
 from .proxy_command import ProxyCommand  # noqa
 from .yaml_parser import YamlParser  # noqa
 
-__version__ = '1.0.2'
+__version__ = '1.0.3'
