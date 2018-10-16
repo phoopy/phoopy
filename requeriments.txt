@@ -1,3 +1,2 @@
 cleo==0.6.8
 PyYAML==3.13
-phoopy==1.0.5
