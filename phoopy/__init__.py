@@ -7,4 +7,4 @@ from .proxy_command import ProxyCommand  # noqa
 from .yaml_parser import YamlParser  # noqa
 from .helper import *  # noqa
 
-__version__ = '1.0.3'
+__version__ = '1.0.4'
