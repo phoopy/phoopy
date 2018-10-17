@@ -102,6 +102,9 @@ class Kernel(object):
         }
 
     def __transform_magic_string(self, value, c):
+        if not isinstance(value, str):
+            return value
+
         const_matches = re.compile('^<const:([^>]+)>$').match(value)
         parameters_matches = re.compile('%[^%]+%').findall(value)
 
