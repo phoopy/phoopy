@@ -160,12 +160,12 @@ class Kernel(object):
         parser = YamlParser()
         self.__config = parser.parse(config_path)
         self.__services = self.__config['services']
-        self.__parameters = self.__config['parameters']
         self.__parameters['kernel'] = {
             'root_path': self.get_root_dir(),
             'app_path': self.get_app_dir(),
             'var_path': self.get_var_dir(),
         }
+        parser.merge(self.__parameters, self.__config['parameters'])
 
     def __initialize_bundles(self):
         self.__bundles = {}

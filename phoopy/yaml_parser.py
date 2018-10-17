@@ -30,13 +30,14 @@ class YamlParser(object):
         >>> b = { 'first' : { 'all_rows' : { 'fail' : 'cat', 'number' : '5' } } }
         >>> merge(a, b) == { 'first' : { 'all_rows' : { 'pass' : 'dog', 'fail' : 'cat', 'number' : '5' } } }
         """
-        for key, value in source.items():
-            if isinstance(value, dict):
-                # get node or create one
-                node = destination.setdefault(key, {})
-                if node is not None:
-                    self.merge(node, value)
+        if isinstance(source, dict):
+            for key, value in source.items():
+                if isinstance(value, dict):
+                    # get node or create one
+                    node = destination.setdefault(key, {})
+                    if node is not None:
+                        self.merge(node, value)
+                    else:
+                        destination[key] = value
                 else:
                     destination[key] = value
-            else:
-                destination[key] = value
