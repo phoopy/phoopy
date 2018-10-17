@@ -8,7 +8,10 @@ setup(
     version=phoopy.__version__,
     packages=['phoopy', 'phoopy.helper'],
     setup_requires=['wheel'],
-    install_requires=[],
+    install_requires=[
+        'cleo==0.6.8',
+        'PyYAML>=3.13'
+    ],
     description="Full stack framework for python based on bundles",
     long_description=long_description,
     url='https://github.com/phoopy/phoopy',
