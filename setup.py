@@ -5,7 +5,7 @@ long_description = open('README.rst', 'r').read()
 
 setup(
     name='phoopy',
-    version=phoopy.phoopy__version__,
+    version=phoopy.phoopy.__version__,
     packages=['phoopy', 'phoopy.phoopy'],
     setup_requires=['wheel'],
     install_requires=[
