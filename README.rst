@@ -3,10 +3,10 @@ Phulpy
 
 Full stack framework for python based on bundles
 
-Test
-~~~~
+Install
+~~~~~~~
 
 .. code:: bash
 
-    pip install -r requeriments_dev.txt
-    phulpy test
+    curl https://raw.githubusercontent.com/phoopy/phoopy-installer/master/phoopy-installer -o phoopy-installer
+    ./phoopy-installer 1.1.0 my-project
