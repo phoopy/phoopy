@@ -1,5 +1,5 @@
 from setuptools import setup
-import phoopy
+import phoopy.phoopy
 
 long_description = open('README.rst', 'r').read()
 
