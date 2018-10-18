@@ -5,12 +5,13 @@ long_description = open('README.rst', 'r').read()
 
 setup(
     name='phoopy',
-    version=phoopy.__version__,
-    packages=['phoopy', 'phoopy.helper'],
+    version=phoopy.phoopy__version__,
+    packages=['phoopy', 'phoopy.phoopy'],
     setup_requires=['wheel'],
     install_requires=[
-        'cleo==0.6.8',
-        'PyYAML>=3.13'
+        'phoopy-kernel>=1.1.0,<1.2.0',
+        'phoopy-console>=1.1.0,<1.2.0',
+        'phoopy-yaml>=1.1.0,<1.2.0'
     ],
     description="Full stack framework for python based on bundles",
     long_description=long_description,

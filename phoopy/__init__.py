@@ -1,10 +1,1 @@
-from .helper import *  # noqa
-from .abstract_command import AbstractCommand  # noqa
-from .application import Application  # noqa
-from .bundle import Bundle  # noqa
-from .container import Container  # noqa
-from .kernel import Kernel  # noqa
-from .proxy_command import ProxyCommand  # noqa
-from .yaml_parser import YamlParser  # noqa
-
-__version__ = '1.0.11'
+__path__ = __import__('pkgutil').extend_path(__path__, __name__)

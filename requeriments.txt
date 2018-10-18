@@ -1,2 +1,3 @@
-cleo==0.6.8
-PyYAML==3.13
+phoopy-console>=1.1.0,<1.2.0
+phoopy-kernel>=1.1.0,<1.2.0
+phoopy-yaml>=1.1.0,<1.2.0
