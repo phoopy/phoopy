@@ -9,7 +9,7 @@ setup(
     packages=['phoopy', 'phoopy.phoopy'],
     setup_requires=['wheel'],
     install_requires=[
-        'phoopy-kernel>=1.1.0,<1.2.0',
+        'phoopy-kernel>=1.1.3,<1.2.0',
         'phoopy-console>=1.1.0,<1.2.0',
         'phoopy-yaml>=1.1.2,<1.2.0'
     ],
