@@ -1,4 +1,4 @@
-Phulpy
+phoopy
 ======
 
 |Build Status| |Version| |Pyversions|
