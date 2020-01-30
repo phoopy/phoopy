@@ -11,7 +11,8 @@ setup(
     install_requires=[
         'phoopy-kernel>=1.1.3,<1.2.0',
         'phoopy-console>=1.1.2,<1.2.0',
-        'phoopy-yaml>=1.1.2,<1.2.0'
+        'phoopy-yaml>=1.1.2,<1.2.0',
+        'phoopy-http>=1.0.5',
     ],
     description="Full stack framework for python based on bundles",
     long_description=long_description,
